@@ -23,7 +23,7 @@ public class OpérateeurTempérature {
         TpsF = lectureclavier.nextInt();
 //        la formul (5d/9d)s'apelle  la  promotion numérique
         result = (5d/9d)*(TpsF-32);
-        System.out.println("la  temperature " + TpsF + "degrés  fahrenhiet donne " + result + " degrés Celcus");
+        System.out.println("la  temperature " + TpsF + "  degrés  fahrenhiet donne " + result + " degrés Celcus");
         
         
      }
