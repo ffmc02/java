@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Calculette {
 
     public static void main(String args[]) {
-        System.out.println("Calculette(V1.0, 23/04/2020)");
+        System.out.println("Calculette(V1.0, 24/04/2020)");
         Scanner lectureclavier = new Scanner(System.in);
         double nbr1;
         double nbr2;
