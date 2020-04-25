@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/laragon/www/exo1/src/exoJava/operateurMoyenne.java</file>
-            <file>file:/D:/laragon/www/exo1/src/exoJava/operateurHms.java</file>
-            <file>file:/D:/laragon/www/exo1/src/exoJava/operateurDiviseur.java</file>
-            <file>file:/D:/laragon/www/exo1/src/exoJava/OpérateeurTempérature.java</file>
+            <file>file:/D:/laragon/www/exo1/src/structuresDeContrôle/Remise.java</file>
+            <file>file:/D:/laragon/www/exo1/src/structuresDeContrôle/Age.java</file>
+            <file>file:/D:/laragon/www/exo1/src/structuresDeContrôle/Calculette.java</file>
         </group>
     </open-files>
 </project-private>

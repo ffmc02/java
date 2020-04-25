@@ -16,50 +16,60 @@ public class Remise {
     public static void main(String args[]) {
         System.out.println("Remise(V1.0, 24/04/2020)");
         Scanner lectureclavier = new Scanner(System.in);
-        int PU1;
-        int PU2;
-        PU2 = 25;
-        PU1 = 12;
-        int QTE1;
-        int QTE2;
-        int TOT;
-        int result;
-        int result2;
+        //prix unitaire de l'article de l'article
+        int PU;
+        //quantité indiqué par l'utilisateur
+        int QTE;
+        //prix pour la quantité choisi sans frais de port sans remise 
+        int CMD;
+        // prix a payer sans remise aveec frais de port
         double PAP;
-        double SRE;
-        double port;
+        //Frais de port 
+        double PORT;
+        //Remise effectuer si le PAP>100 et <200 alors 5% si >200 alors 10%
         double remise;
-
-        System.out.println("Mettre la quantité de l'article 1");
-        QTE1 = lectureclavier.nextInt();
-        result = QTE1 * PU1;
-        System.out.println("Mettre la quantité de l'article 2");
-        QTE2 = lectureclavier.nextInt();
-        result2 = QTE2 * PU2;
-        TOT = result + result2;
-        if (TOT > 500) {
-            port = 0;
+        //prix total avec remise et frais de port 
+        double TOT;
+        //resulta de la remise 
+        double Rtot;
+        //Frais de port appliqué pour la commande 
+        double FPort;
+        PU = 20;
+        //demande a l'utilisateur d'indidiqué au clavier une quantité
+        System.out.println("entré la quantité de l'article ");
+        //recupération des données utilisateur
+        QTE = lectureclavier.nextInt();
+        //calcul du prix sans remise et sans frais de port
+        CMD = PU * QTE;
+        System.out.println("Vous avez une commande de " + QTE + " pour un prix unitaire de " + PU + "  soit un montant de " + CMD);
+        //Si les commande est inferieur a 500 euros alors j'applique 2 % de frais de port 
+        if (CMD >= 500) {
+            PORT = 0;
+            System.out.println("Vous n'avez pas de frais de port");
         } else {
-            port = (result * 1.02);
+            PORT = CMD * 1.02;
+            FPort = PORT - CMD;
+            if (FPort < 6) {
+                FPort = 6;
+                System.out.println("Vos frais de port s'éléve a " + FPort);
+            }
         }
-        if (port > 6) {
-            port = 6;
+        if (PORT > 100 && PORT < 200) {
+            TOT = PORT * 0.95;
+            remise= PORT -TOT;
+             System.out.println("Le prix total de la commande pour "+ QTE + " article(s), s'éleve à " + TOT + " € Dont " + remise +" de remise.");
+        } 
+        else if (PORT > 200) {
+            TOT = PORT*0.9 ; 
+            remise= PORT -TOT;
+            System.out.println("Le prix total de la commande pour "+ QTE + " article(s), s'éleve à " + TOT + " € Dont " + remise +" de remise.");
+        }else {
+            TOT =PORT;
+            remise = 0;
+            System.out.println("Le prix total de la commande pour "+ QTE + " article(s), s'éleve à " + TOT + " € Vous n'avez pas eu de remise." );
         }
-        SRE = port + result + result2;
-        if(100<SRE && 200> SRE){
-            PAP = SRE *0.95;
-            remise = PAP - SRE;
-        }
-        else {
-            PAP = SRE *0.90 ;
-            remise = PAP - SRE;
-        }
-        System.out.println("prix total " + PAP + 
-                " prix 1 article " + result+  " pour " + QTE1 + " Quentités " +
-                " prix second article " + result2 +  " pour " + QTE1 + " Quentités " +
-                " prix du port " +  port +
-                "montant de la remise " + remise +
-                " prix total sans le port " + TOT);
-    }
+        
 
+            
+    }
 }
