@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Remise {
 
     public static void main(String args[]) {
-        System.out.println("Remise(V1.0, 24/04/2020)");
+        System.out.println("Remise(V1.2, 25/04/2020)");
         Scanner lectureclavier = new Scanner(System.in);
         //prix unitaire de l'article de l'article
         int PU;
