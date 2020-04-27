@@ -15,7 +15,7 @@ public class triangle {
 
     public static void main(String args[]) {
 
-        System.out.println("Nombre De Voyelles(V1.0, 27/04/2020)");
+        System.out.println("triangle(V1.0, 27/04/2020)");
         Scanner lectureclavier = new Scanner(System.in);
 
         int nbrLigne;
