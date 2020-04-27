@@ -19,14 +19,15 @@ public class sommeDesEntiersInférieursàN {
         int n;
         //variable des resultats de l'addition des entiers 
         int addN;
-        addN= 0;
+        addN=0;
         System.out.println("Ecrivez un nombre entier.");
         nbr = lectureclavier.nextInt();
         //boucle for; n = nbr-1, si n est supperieur a 0 alors je retire 1 a n 
+        System.out.println("Vous avez choisie le nombre" + nbr );
         for(n= nbr-1; n>0; n--){
-            // j'affiche les nombres entier inferieur à N;
-            addN= n+n;
-            
-        }System.out.println(addN);
+            // j'additionne l'ensemble des nombres entier inférieur au nombre choisie
+          addN = addN+n;
+        }
+        System.out.println("La somme des nombres entier inférieur au nombre choisie est " + addN);
     }
 }
