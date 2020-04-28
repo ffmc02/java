@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class array1 {
 
     public static void main(String args[]) {
-        System.out.println("Exercice 1(V1.0, 26/04/2020)");
+        System.out.println("array 1(V1.0, 27/04/2020)");
         Scanner lectureclavier = new Scanner(System.in);
         int n;
         String tab[];
