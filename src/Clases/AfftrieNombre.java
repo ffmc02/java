@@ -11,7 +11,9 @@ package Clases;
  */
 public class AfftrieNombre {
     public static void main( String args[] ){
+        //création du nouvelle objet TriNombre
         TriNombre exp1=new TriNombre();
+        //application des méthode a l'objet exp1
         exp1.saisie();
         exp1.trie();
         exp1.affiche();
