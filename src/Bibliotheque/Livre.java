@@ -10,13 +10,14 @@ package Bibliotheque;
  * @author gaeta
  */
 public class Livre {
+    //initialisation des variable 
     private String titre;
     private String nom;
     private String prenom;
     private String categorie;
     private String codeISBN;
     private String codeEnregistrement;
-
+//création des geter et setter pour les variables 
     public String getTitre() {
         return titre;
     }
@@ -64,10 +65,13 @@ public class Livre {
     public void setCodeEnregistrement(String codeEnregistrement) {
         this.codeEnregistrement = codeEnregistrement;
     }
-
+//Creation de la fonction pour calculer le code d'enregistrement 
     public void calculerCode() {
+        //récupération de la premier lettre du nom de l'auteur 
         String nom = String.valueOf(this.nom.charAt(0));
+        //recupération de la premier lettre du prénon de l'auteur
         String prenom = String.valueOf(this.prenom.charAt(0));
+//        compilation de la 
         String categorie = this.categorie;
         int isbnLength = this.codeISBN.length();
         String isbn = String.valueOf(this.codeISBN.charAt(isbnLength-2))+String.valueOf(this.codeISBN.charAt(isbnLength-1));
