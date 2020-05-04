@@ -71,18 +71,25 @@ public class Livre {
         String nom = String.valueOf(this.nom.charAt(0));
         //recupération de la premier lettre du prénon de l'auteur
         String prenom = String.valueOf(this.prenom.charAt(0));
-//        compilation de la 
+//       recuperation de la catégory
         String categorie = this.categorie;
+        //on compte ma longueur de code ISNB
         int isbnLength = this.codeISBN.length();
+        //concatenation pour la code isbn
         String isbn = String.valueOf(this.codeISBN.charAt(isbnLength-2))+String.valueOf(this.codeISBN.charAt(isbnLength-1));
         this.codeEnregistrement = nom+prenom+categorie+isbn;
     }
-
+//fonction pour afficher le livre
     public void afficheUnLivre() {
+        //affichage du titre
         System.out.println("Titre : "+this.titre);
-        System.out.println("Auteur : "+this.nom+" "+this.prenom);
-        System.out.println("CatÃ©gorie : "+this.categorie);
-        System.out.println("Code ISBN : "+this.codeISBN);
-        System.out.println("Code enregistrement : "+this.codeEnregistrement);
+        //affichage de l'auteur
+        System.out.println("Auteur : "+ this.nom + " " + this.prenom);
+        //Affichage de la catégorie
+        System.out.println("CatÃ©gorie : "+ this.categorie);
+        //affichage du code ISBN
+        System.out.println("Code ISBN : "+ this.codeISBN);
+        //Affichage du code d'enregistement 
+        System.out.println("Code enregistrement : " + this.codeEnregistrement);
     }
 }
